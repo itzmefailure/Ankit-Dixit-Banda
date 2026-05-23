@@ -1,0 +1,1252 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #0f172a;
+    --accent-color: #3b82f6;
+    --accent-hover: #2563eb;
+    --secondary-color: #f59e0b;
+    --text-dark: #1e293b;
+    --text-light: #f8fafc;
+    --bg-light: #f1f5f9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.logo span {
+    color: var(--accent-color);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8rem 5% 4rem;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: var(--text-light);
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.hero-content h1 span {
+    color: var(--secondary-color);
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #cbd5e1;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-3px);
+}
+
+.hero-graphics {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.floating-shape {
+    font-size: 10rem;
+    color: var(--accent-color);
+    animation: float 4s ease-in-out infinite;
+    filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.5));
+}
+
+@keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+
+/* Sections General */
+section {
+    padding: 5rem 5%;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.divider {
+    height: 4px;
+    width: 60px;
+    background-color: var(--accent-color);
+    margin: 0.5rem auto;
+    border-radius: 2px;
+}
+
+/* Features */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-card i {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+/* Batches */
+.batch-container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.batch-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 350px;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.batch-card:hover {
+    transform: scale(1.03);
+}
+
+.batch-header {
+    padding: 2rem;
+    text-align: center;
+    color: white;
+}
+
+.blue-gradient {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+
+.orange-gradient {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+.batch-header h3 {
+    font-size: 2rem;
+}
+
+.batch-body {
+    padding: 2rem;
+}
+
+.batch-body ul {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.batch-body li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.batch-body li i {
+    color: #10b981;
+}
+
+.btn-outline {
+    width: 100%;
+    padding: 0.8rem;
+    background: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: var(--accent-color);
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 3rem 5% 1rem;
+}
+
+.social-links {
+    margin: 1.5rem 0;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* =========================================
+   Footer Copyright & Developer Credit
+   ========================================= */
+
+.copyright {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.9rem;
+    color: #94a3b8;
+    
+    /* Perfect Centering ke liye Flexbox */
+    display: flex;
+    flex-direction: column; /* Lines ko ek ke niche ek rakhega */
+    align-items: center; /* Horizontally center karega */
+    justify-content: center;
+    text-align: center;
+    gap: 8px; /* Dono lines ke beech thoda space dega */
+}
+
+/* Scroll Animations */
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.hidden-delay {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+    transition-delay: 0.2s;
+}
+
+.hidden-delay-2 {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+    transition-delay: 0.4s;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        top: 70px;
+        background-color: var(--primary-color);
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .nav-links li {
+        padding: 1rem 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .nav-links.active {
+        max-height: 300px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 6rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-graphics {
+        margin-top: 3rem;
+    }
+    
+    .floating-shape {
+        font-size: 7rem;
+    }
+}
+/* =========================================
+   Modal (Popup) Styles Added Below
+   ========================================= */
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 23, 42, 0.8); /* Dark blur background */
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: white;
+    margin: auto;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 85vh;
+    position: relative;
+    transform: translateY(-50px);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.modal.show-modal .modal-content {
+    transform: translateY(0);
+}
+
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+    transition: transform 0.2s ease;
+}
+
+.close-btn:hover {
+    transform: scale(1.2);
+}
+
+.modal-header {
+    padding: 2rem 1.5rem;
+    text-align: center;
+    color: white;
+}
+
+.modal-header h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.modal-header p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.syllabus-list {
+    padding: 2rem;
+    overflow-y: auto; /* Enables scrolling for mobile */
+}
+
+.syllabus-list ol {
+    padding-left: 1.5rem;
+    line-height: 1.8;
+}
+
+.syllabus-list li {
+    margin-bottom: 12px;
+    color: var(--text-dark);
+    font-size: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 8px;
+}
+
+.syllabus-list li:last-child {
+    border-bottom: none;
+}
+
+.syllabus-list strong {
+    color: var(--primary-color);
+}
+
+/* Modal Mobile Responsiveness */
+@media (max-width: 600px) {
+    .modal-header h2 {
+        font-size: 1.5rem;
+    }
+    .syllabus-list {
+        padding: 1.5rem;
+    }
+    .syllabus-list li {
+        font-size: 0.9rem;
+    }
+}
+/* =========================================
+   About Mentor Section Styles
+   ========================================= */
+
+.about-mentor {
+    background-color: white; /* Thoda alag background look ke liye */
+}
+
+/* =========================================
+   About Mentor Section (Professional Look)
+   ========================================= */
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 5rem; /* Gap thoda badhaya hai taaki photo aur text me space rahe */
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 0; /* Upar-niche thodi saans lene ki jagah */
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image ko perfectly Round aur Premium banane ka code */
+.about-image img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%; /* Image ko bilkul gol (round) banayega */
+    object-fit: cover; /* Agar photo lambi ya chaudi hai toh use stretch hone se rokega */
+    
+    /* Premium Styling Effects */
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2); /* 3D Shadow effect */
+    border: 8px solid white; /* Ander ek safed border */
+    outline: 3px solid var(--accent-color); /* Bahar ek patli blue line */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover karne par image thodi upar uthegi */
+.about-image img:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile Screen ke liye adjustment */
+@media (max-width: 900px) {
+    .about-content {
+        flex-direction: column; /* Mobile me photo upar aur text niche */
+        text-align: center;
+        gap: 3rem;
+    }
+    
+    .about-image img {
+        width: 250px; /* Mobile me photo ka size thoda chota */
+        height: 250px;
+    }
+}
+
+/* Photo Placeholder - Jab tak aap apni photo nahi lagate */
+.image-placeholder {
+    width: 320px;
+    height: 320px;
+    background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+    color: white;
+    font-size: 9rem;
+    border: 10px solid var(--bg-light);
+    transition: transform 0.3s ease;
+}
+
+.image-placeholder:hover {
+    transform: scale(1.05);
+}
+
+.about-text {
+    flex: 1.5;
+}
+
+.about-text h3 {
+    font-size: 2.8rem;
+    color: var(--primary-color);
+    margin-bottom: 0.2rem;
+}
+
+.qualification {
+    color: var(--accent-color);
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.about-text p {
+    margin-bottom: 1.2rem;
+    line-height: 1.8;
+    color: #475569;
+    font-size: 1.05rem;
+}
+
+.stats {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.stat-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--bg-light);
+    padding: 12px 20px;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    font-weight: 600;
+    color: var(--primary-color);
+    border: 1px solid #e2e8f0;
+}
+
+.stat-box i {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+/* Mobile Responsiveness for About Section */
+@media (max-width: 900px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2.5rem;
+    }
+    
+    .stats {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .image-placeholder {
+        width: 250px;
+        height: 250px;
+        font-size: 7rem;
+    }
+    
+    .about-text h3 {
+        font-size: 2.2rem;
+    }
+}
+/* =========================================
+   Expandable Feature Cards Styles
+   ========================================= */
+
+.feature-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feature-card .summary {
+    margin-bottom: 10px;
+}
+
+.feature-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, margin-top 0.4s ease-in-out, padding 0.4s ease-in-out, opacity 0.3s ease;
+    opacity: 0;
+    text-align: justify;
+    color: #475569;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.feature-card.expanded .feature-details {
+    max-height: 300px; /* Adjust if content increases */
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #e2e8f0;
+    opacity: 1;
+}
+
+.read-more-btn {
+    background: none;
+    border: none;
+    color: var(--accent-color);
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: auto;
+    padding-top: 15px;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.read-more-btn:hover {
+    color: var(--accent-hover);
+}
+
+.read-more-btn i {
+    transition: transform 0.3s ease;
+}
+
+.feature-card.expanded .read-more-btn i {
+    transform: rotate(180deg);
+}
+/* =========================================
+   Contact / Get in Touch Section Styles
+   ========================================= */
+
+.contact {
+    background-color: var(--text-light); /* Matching your light background */
+}
+
+.contact .section-header p {
+    color: #475569;
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+}
+
+.contact-card {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+    text-align: center;
+    min-width: 280px;
+    flex: 1;
+    max-width: 350px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 25px -5px rgba(0,0,0,0.1);
+}
+
+.icon-wrapper {
+    width: 70px;
+    height: 70px;
+    background: var(--bg-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: background 0.3s ease;
+}
+
+.contact-card:hover .icon-wrapper {
+    background: var(--accent-color);
+}
+
+.contact-card i {
+    font-size: 2rem;
+    color: var(--accent-color);
+    transition: color 0.3s ease;
+}
+
+.contact-card:hover i {
+    color: white;
+}
+
+.contact-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.contact-card p {
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.contact-card .sub-text {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin-top: 5px;
+    font-weight: 400;
+}
+
+/* Social Connect Area */
+.social-connect {
+    text-align: center;
+    padding-top: 3rem;
+    border-top: 1px solid #cbd5e1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.social-connect h3 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.social-connect p {
+    color: #475569;
+    margin-bottom: 2rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: white;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    text-decoration: none;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover Colors for Social Brands */
+.social-btn:hover {
+    transform: translateY(-5px) scale(1.1);
+    color: white;
+}
+
+.social-btn.youtube:hover {
+    background: #FF0000;
+    box-shadow: 0 10px 15px -3px rgba(255, 0, 0, 0.3);
+}
+
+.social-btn.instagram:hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+    box-shadow: 0 10px 15px -3px rgba(214, 36, 159, 0.3);
+}
+
+.social-btn.facebook:hover {
+    background: #1877F2;
+    box-shadow: 0 10px 15px -3px rgba(24, 119, 242, 0.3);
+}
+
+/* Mobile Responsiveness for Contact */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-card {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+/* =========================================
+   Scroll to Top Button Styles
+   ========================================= */
+
+.scroll-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999; /* Taaki sabse upar dikhe */
+    background-color: var(--accent-color); /* Blue color */
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    
+    /* Initially hide the button */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hover effect */
+.scroll-top-btn:hover {
+    background-color: var(--secondary-color); /* Orange color on hover */
+    transform: translateY(-5px); /* Upar ki taraf thoda uthega */
+    box-shadow: 0 6px 15px rgba(245, 158, 11, 0.4);
+}
+
+/* Class to show button when scrolling down */
+.scroll-top-btn.show-btn {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .scroll-top-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+}
+/* =========================================
+   WhatsApp Floating Button Styles
+   ========================================= */
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    left: 30px; /* Left side par set kiya hai */
+    width: 60px;
+    height: 60px;
+    background-color: #25d366; /* Official WhatsApp Green */
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    
+    /* Lahrata hua (Pulse) Animation lagaya hai */
+    animation: pulse-whatsapp 2s infinite;
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E; /* Hover par thoda dark green */
+    color: #fff;
+}
+
+/* Keyframes for Continuous Pulsing/Waving Animation */
+@keyframes pulse-whatsapp {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    50% {
+        transform: scale(1.08); /* Thoda bada hoga */
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); /* Ring bahar ki taraf fade hogi */
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        left: 20px;
+        font-size: 30px;
+    }
+}
+/* =========================================
+Developer Credit Styles
+   ========================================= */
+
+.developer-credit {
+    margin-top: 12px;
+    font-size: 0.9rem;
+    color: #94a3b8; /* Faded greyish color */
+}
+
+.developer-credit i {
+    color: #ef4444; /* Red color for heart */
+    margin: 0 4px;
+    animation: heartbeat 1.5s infinite; /* Thoda sa animation */
+}
+
+.developer-credit a {
+    color: var(--accent-color); /* Blue accent color */
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.developer-credit a:hover {
+    color: var(--secondary-color); /* Orange color on hover */
+    text-decoration: underline;
+}
+
+/* Optional Heartbeat Animation */
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+/* =========================================
+   Toppers Page Styles
+   ========================================= */
+
+.toppers-hero {
+    padding: 8rem 5% 5rem;
+    background: var(--bg-light);
+    min-height: 100vh;
+}
+
+.toppers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.topper-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+
+.topper-card:hover {
+    transform: translateY(-10px);
+}
+
+.topper-img {
+    height: 200px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 5rem;
+}
+
+.topper-info {
+    padding: 1.5rem;
+}
+
+.topper-info h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.topper-info .score {
+    display: block;
+    color: var(--secondary-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.topper-info .exam {
+    font-weight: 600;
+    color: #475569;
+}
+
+.topper-info .rank {
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    margin-top: 5px;
+}
+.topper-img {
+    height: 250px; /* Aap height adjust kar sakte hain */
+    overflow: hidden; /* Photo agar bahar nikle toh cut jaye */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.topper-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Sabse zaroori: photo stretch nahi hogi, bas fit ho jayegi */
+    object-position: top; /* Face ko center ya top par focus karne ke liye */
+    transition: transform 0.5s ease;
+}
+
+/* Hover karne par photo thodi zoom hogi */
+.topper-card:hover .topper-img img {
+    transform: scale(1.1);
+}
+/* =========================================
+   About/Team Page Specific Styles
+   ========================================= */
+
+.about-hero {
+    padding: 8rem 5% 2rem;
+    background: white;
+    text-align: center;
+}
+
+.team-section {
+    padding: 3rem 5% 5rem;
+    background-color: var(--bg-light);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.team-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: all 0.3s ease;
+    border-bottom: 5px solid var(--accent-color);
+}
+
+.team-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.member-img {
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.member-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.member-info {
+    padding: 2rem 1.5rem;
+}
+
+.member-info h3 {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.member-info .role {
+    color: var(--secondary-color);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.member-info .bio {
+    font-size: 0.95rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.member-social {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.member-social a {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.member-social a:hover {
+    color: var(--accent-color);
+}
+/* =========================================
+   Clickable Contact Cards Fix
+   ========================================= */
+
+a.contact-link {
+    text-decoration: none; /* Link ki underline hatane ke liye */
+    display: block; /* Poore card ko clickable banane ke liye */
+    cursor: pointer;
+}
+
+/* Ensure text color doesn't turn blue like standard links */
+a.contact-link h3 {
+    color: var(--primary-color);
+}
+
+a.contact-link p {
+    color: var(--text-dark);
+}
+/* =========================================
+   Vertical Banner Stack Styles (Real Size & Responsive)
+   ========================================= */
+
+.banner-stack {
+    display: flex;
+    flex-direction: column; 
+    gap: 3rem; /* Banners ke beech ka gap (Aap isko 2rem ya 4rem karke adjust kar sakte hain) */
+    max-width: 1100px; /* PC par kitna chauda dikhega */
+    margin: 0 auto 5rem auto;
+    padding: 0 20px; /* Screen ke right-left se thoda safe space */
+}
+
+.banner-stack img {
+    width: 100%; /* Screen/frame ke hisaab se poori chaudai lega */
+    height: auto; /* SABSE ZAROORI: Photo ko crop hone se rokega aur original size dikhayega */
+    border-radius: 15px; /* Frame ke kinare gol karne ke liye */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* 3D Shadow effect */
+    border: 4px solid white; /* Photo ke chaaro taraf white frame */
+    transition: transform 0.3s ease; /* Hover animation smooth karne ke liye */
+}
+
+/* Hover karne par banner thoda upar aayega */
+.banner-stack img:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile Screen ke liye adjustment (Responsiveness) */
+@media (max-width: 768px) {
+    .banner-stack {
+        gap: 2rem; /* Mobile me screen choti hoti hai, isliye gap thoda kam kiya hai */
+        padding: 0 15px;
+        margin-bottom: 3rem;
+    }
+}
+
