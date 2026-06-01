@@ -349,18 +349,27 @@ footer {
     }
 
     .nav-links li {
-        padding: 1rem 0;
+        /* Padding yahan se hata di gayi hai */
         border-bottom: 1px solid rgba(255,255,255,0.1);
+        width: 100%;
+    }
+
+    /* Ye naya block add kiya hai */
+    .nav-links li a {
+        display: block;      /* Link ko poori width me failane ke liye */
+        padding: 1rem 0;     /* Padding ab link ke andar hai taaki tap area badh jaye */
+        width: 100%;
     }
 
     .nav-links.active {
-        max-height: 300px;
+        max-height: 300px; /* Agar options badhayein toh ise thoda aur bada kar lijiyega, like 400px */
     }
 
     .hamburger {
         display: block;
     }
 
+    
     .hero {
         flex-direction: column;
         text-align: center;
@@ -380,7 +389,7 @@ footer {
     }
 }
 /* =========================================
-   Modal (Popup) Styles Added Below
+    Modal (Popup) Styles Added Below
    ========================================= */
 
 .modal {
