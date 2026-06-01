@@ -100,3 +100,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
+    // Jab poori website load ho jayegi, tab loader gayab ho jayega
+    window.addEventListener("load", function() {
+        const loader = document.getElementById("loader-wrapper");
+        
+        // Halka sa delay de rahe hain taaki animation ka maza aaye (0.5 seconds)
+        setTimeout(function() {
+            loader.classList.add("loader-hidden");
+        }, 500); 
+    });

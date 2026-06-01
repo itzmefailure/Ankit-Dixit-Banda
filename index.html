@@ -18,6 +18,15 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+<div id="loader-wrapper">
+    <div class="atom">
+        <div class="electron"></div>
+        <div class="electron"></div>
+        <div class="electron"></div>
+        <div class="nucleus"></div>
+    </div>
+    <p class="loading-text">Loading Physics Magic...</p>
+</div>
 <body>
 
     <nav class="navbar">
@@ -37,18 +46,26 @@
     </nav>
 
     <header id="home" class="hero">
-        <div class="hero-content hidden">
-            <h1>BANDA's No.1 Coaching for <span>Physics</span></h1>
-            <p>Specialized coaching for Class 11th and 12th. Build a rock-solid foundation for board exams and competitive success.</p>
-            <a href="#batches" class="btn">View Batches <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="hero-graphics hidden-delay">
-            <div class="floating-shape">
-                <i class="fas fa-rocket"></i>
-            </div>
-        </div>
-    </header>
+    
+    <video class="hero-video" autoplay loop muted playsinline>
+        <source src="Photos/myvideo1.mp4" type="video/mp4">
+    </video>
+    
+    <div class="video-overlay"></div>
 
+    <div class="hero-content">
+        <h1>BANDA's No.1 Coaching for <span>Physics</span></h1>
+        <p>Specialized coaching for Class 11th and 12th. Build a rock-solid foundation for board exams and competitive success.</p>
+        <a href="#batches" class="btn">View Batches <i class="fas fa-arrow-right"></i></a>
+    </div>
+    
+    <div class="hero-graphics">
+        <div class="floating-shape">
+            <i class="fas fa-rocket"></i>
+        </div>
+    </div>
+    
+</header>
     <section id="features" class="features">
         <div class="section-header hidden">
             <h2>Why Choose Us?</h2>
@@ -260,11 +277,17 @@
     </a>
     
     <div class="copyright">
-            <p>&copy; 2026 AnkitDixit. All Rights Reserved.</p>
-            <p class="developer-credit">
-                Designed & Developed with <i class="fas fa-heart"></i> by <a href="https://www.instagram.com/ideeepaksharma?igsh=ZzlsNzhhY3Z3b3B1" target="_blank">Deepak Sharma</a><p>Banda , UP(210001)</p>
-            </p>
-        </div>
+    <p>&copy; 2026 AnkitDixit. All Rights Reserved.</p>
+    
+    <!-- Naya Location Section -->
+    <p class="location-text">
+        <i class="fas fa-map-marker-alt"></i> Location - Dr Narendra Gupta ki gali ke pichhe, DM Colony, Banda, Uttar Pradesh [210001]
+    </p>
+    
+    <p class="developer-credit">
+        Designed & Developed with <i class="fas fa-heart"></i> by <a href="https://www.instagram.com/ideeepaksharma?igsh=ZzlsNzhhY3Z3b3B1" target="_blank">Deepak Sharma</a>
+    </p>
+</div>
 
     <script src="script.js"></script>
 </body>

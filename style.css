@@ -72,17 +72,46 @@ body {
 }
 
 /* Hero Section */
+/* =========================================
+   HERO SECTION - BASE CSS
+========================================= */
 .hero {
+    position: relative; /* Video ko section ke andar rakhne ke liye Zaroori */
+    overflow: hidden;   /* Video bahar na nikle iske liye Zaroori */
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 8rem 5% 4rem;
     min-height: 100vh;
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); /* Agar video load na ho toh ye chalega */
     color: var(--text-light);
 }
 
+/* --- VIDEO AUR OVERLAY KA CODE --- */
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1; /* Video sabse pichhe */
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Video ko dark karne ke liye */
+    z-index: 2; /* Video ke theek upar */
+}
+
+/* --- CONTENT KA CODE --- */
 .hero-content {
+    position: relative; /* Text ko video ke upar laane ke liye */
+    z-index: 3;         /* Text overlay ke aage rahega */
     flex: 1;
     max-width: 600px;
 }
@@ -119,7 +148,10 @@ body {
     transform: translateY(-3px);
 }
 
+/* --- GRAPHICS AUR ANIMATION KA CODE --- */
 .hero-graphics {
+    position: relative; /* Graphic ko video ke upar laane ke liye */
+    z-index: 3;         
     flex: 1;
     display: flex;
     justify-content: center;
@@ -136,6 +168,35 @@ body {
     0% { transform: translateY(0px) rotate(0deg); }
     50% { transform: translateY(-20px) rotate(5deg); }
     100% { transform: translateY(0px) rotate(0deg); }
+}
+
+/* =========================================
+   MOBILE RESPONSIVE (SMARTPHONES)
+========================================= */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding-top: 6rem;
+        padding-bottom: 3rem;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem; /* Mobile par heading chhoti ki */
+    }
+
+    .hero-graphics {
+        margin-top: 3rem;  /* Text aur animation ke beech space */
+    }
+
+    .floating-shape {
+        font-size: 7rem;   /* Mobile par icon thoda chhota kiya */
+    }
 }
 
 /* Sections General */
@@ -370,23 +431,7 @@ footer {
     }
 
     
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding-top: 6rem;
-    }
-
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-graphics {
-        margin-top: 3rem;
-    }
     
-    .floating-shape {
-        font-size: 7rem;
-    }
 }
 /* =========================================
     Modal (Popup) Styles Added Below
@@ -1258,4 +1303,114 @@ a.contact-link p {
         margin-bottom: 3rem;
     }
 }
+/* =========================================
+   PHYSICS ATOM LOADER
+========================================= */
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0f172a; /* Dark background */
+    z-index: 9999; /* Sabse upar dikhane ke liye */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.6s ease-out;
+}
+
+.atom {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+/* Electrons ki Orbits */
+.electron {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 3px solid rgba(59, 130, 246, 0.5); /* Blue color */
+    transform-style: preserve-3d;
+}
+
+/* Alag-alag angles par 3 orbits */
+.electron:nth-child(1) { transform: rotateX(60deg) rotateY(0deg); animation: spin1 1.5s linear infinite; }
+.electron:nth-child(2) { transform: rotateX(60deg) rotateY(60deg); animation: spin2 1.5s linear infinite; }
+.electron:nth-child(3) { transform: rotateX(60deg) rotateY(120deg); animation: spin3 1.5s linear infinite; }
+
+/* Center ka Nucleus */
+.nucleus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: var(--accent-color, #ffaa00);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 20px var(--accent-color, #ffaa00);
+}
+
+.loading-text {
+    color: white;
+    margin-top: 30px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    animation: pulse 1.5s infinite;
+}
+
+/* Animations */
+@keyframes spin1 { 100% { transform: rotateX(60deg) rotateY(0deg) rotateZ(360deg); } }
+@keyframes spin2 { 100% { transform: rotateX(60deg) rotateY(60deg) rotateZ(360deg); } }
+@keyframes spin3 { 100% { transform: rotateX(60deg) rotateY(120deg) rotateZ(360deg); } }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+
+/* Jab load ho jaye toh hatane ke liye class */
+.loader-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+/* Copyright Footer Section */
+.copyright {
+    /* Yahan apne baaki footer ka color daalein. (Example: #0f172a ya var(--primary-color)) */
+    background-color: #0f172a; 
+    
+    color: #cbd5e1; /* Text ko thoda light/white rakhne ke liye */
+    text-align: center;
+    padding: 20px 5%;
+    font-size: 0.9rem;
+    
+    /* Agar footer aur copyright ke beech ek patli line chahiye toh ye rakhein, warna hata dein */
+    border-top: 1px solid rgba(255, 255, 255, 0.1); 
+}
+
+/* Location Text ke beech me spacing ke liye */
+.copyright .location-text {
+    margin: 10px 0;
+}
+
+/* Location aur Heart icon ka color red karne ke liye */
+.copyright i.fa-map-marker-alt, 
+.copyright i.fa-heart {
+    color: #ff4757; 
+}
+
+/* Deepak Sharma wale link ka color aur style */
+.copyright a {
+    color: var(--accent-color, #ffaa00);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.copyright a:hover {
+    text-decoration: underline;
+}
+
 
