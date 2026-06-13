@@ -1,13 +1,15 @@
-:root{
-    --primary-color:#0f172a;
-    --accent-color:#0284c7;
-    --secondary-color:#38bdf8;
-    --text-light:#ffffff;
-    --text-dark:#1e293b;
+:root {
+    --primary-color: #0f172a;
+    --accent-color: #3b82f6;
+    --accent-hover: #2563eb;
+    --secondary-color: #f59e0b;
+    --text-dark: #1e293b;
+    --text-light: #f8fafc;
+    --bg-light: #f1f5f9;
 }
 
 /* =====================
-   RESET
+    RESET
 ===================== */
 
 *{
@@ -27,68 +29,59 @@ body{
     overflow-x:hidden;
 }
 
+
 /* =====================
-   NAVBAR
+    NAVBAR
 ===================== */
 
-.navbar{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:1000;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    padding:1.2rem 5%;
-
-    background:var(--primary-color);
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-.logo{
-    font-size:1.8rem;
-    font-weight:700;
-    color:#ffffff;
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
-.logo span{
-    color:#0284c7;
+.logo span {
+    color: var(--accent-color);
 }
 
-.logo i{
-    margin-right:6px;
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
 }
 
-.nav-links{
-    list-style:none;
-    display:flex;
-    align-items:center;
-    gap:2rem;
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
-.nav-links a{
-    text-decoration:none;
-    color:#ffffff;
-    font-weight:600;
-    transition:.3s;
+.nav-links a:hover {
+    color: var(--accent-color);
 }
 
-.nav-links a:hover{
-    color:#38bdf8;
-}
-
-.hamburger{
-    display:none;
-    color:#ffffff;
-    font-size:1.8rem;
-    cursor:pointer;
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 /* =====================
-   HERO
+    HERO
 ===================== */
 
 .hero{
@@ -210,39 +203,39 @@ body{
 /* =====================
    FOOTER
 ===================== */
-
-.copyright{
-    background:#0f172a;
-    color:#cbd5e1;
-    text-align:center;
-    padding:30px 15px;
-    margin-top:50px;
+.copyright {
+    /* Yahan apne baaki footer ka color daalein. (Example: #0f172a ya var(--primary-color)) */
+    background-color: #0f172a; 
+    
+    color: #cbd5e1; /* Text ko thoda light/white rakhne ke liye */
+    text-align: center;
+    padding: 20px 5%;
+    font-size: 0.9rem;
+    
+    /* Agar footer aur copyright ke beech ek patli line chahiye toh ye rakhein, warna hata dein */
+    border-top: 1px solid rgba(255, 255, 255, 0.1); 
 }
 
-.copyright p{
-    margin:10px 0;
+/* Location Text ke beech me spacing ke liye */
+.copyright .location-text {
+    margin: 10px 0;
 }
 
-.location-text{
-    color:#94a3b8;
+/* Location aur Heart icon ka color red karne ke liye */
+.copyright i.fa-map-marker-alt, 
+.copyright i.fa-heart {
+    color: #ff4757; 
 }
 
-.location-text i{
-    color:#38bdf8;
+/* Deepak Sharma wale link ka color aur style */
+.copyright a {
+    color: var(--accent-color, #ffaa00);
+    text-decoration: none;
+    font-weight: 600;
 }
 
-.developer-credit a{
-    color:#38bdf8;
-    text-decoration:none;
-    font-weight:600;
-}
-
-.developer-credit a:hover{
-    text-decoration:underline;
-}
-
-.fa-heart{
-    color:#ef4444;
+.copyright a:hover {
+    text-decoration: underline;
 }
 
 /* =====================
