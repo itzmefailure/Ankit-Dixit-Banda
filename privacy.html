@@ -1,143 +1,159 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth overflow-x-hidden">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy | Ankit Dixit Physics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Privacy Policy | Ankit Dixit Physics Classes</title>
     
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpeg" href="./photos/ad favicon.jpg">
+    <meta name="description" content="Privacy Policy for Ankit Dixit Physics Classes. Learn how we handle your information.">
     
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <style>
-        /* Specific CSS for Privacy Policy text to look like a legal document */
-        .policy-section {
-            max-width: 900px;
-            margin: 120px auto 60px; /* Top margin adjusted for fixed navbar */
-            padding: 40px;
-            background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border: 1px solid #e2e8f0;
-        }
-
-        .policy-section h1 {
-            color: #0f172a;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-
-        .policy-section .last-updated {
-            text-align: center;
-            color: #64748b;
-            font-style: italic;
-            margin-bottom: 40px;
-            font-size: 0.95rem;
-        }
-
-        .policy-section h2 {
-            color: #0284c7;
-            font-size: 1.5rem;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #f1f5f9;
-            padding-bottom: 8px;
-        }
-
-        .policy-section p, .policy-section li {
-            color: #475569;
-            line-height: 1.8;
-            margin-bottom: 15px;
-            font-size: 1.05rem;
-        }
-
-        .policy-section ul {
-            margin-left: 20px;
-            margin-bottom: 20px;
-        }
-
-        @media(max-width: 768px) {
-            .policy-section {
-                margin: 100px 15px 40px;
-                padding: 20px;
-            }
-            .policy-section h1 {
-                font-size: 2rem;
-            }
-        }
-    </style>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Master CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800 antialiased overflow-x-hidden w-full relative">
 
-    <nav class="navbar">
-        <div class="logo">
-            <i class="fas fa-atom"></i> Ankit<span>Dixit</span>
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-2 md:gap-3">
+                    <img src="./photos/ad favicon.jpg" alt="Logo" class="h-10 w-10 md:h-12 md:w-12 rounded-full border-2 border-blue-600 shadow-sm">
+                    <div class="text-xl md:text-2xl font-bold text-blue-900 flex items-center premium-font tracking-wide">
+                        Ankit<span class="text-blue-500 ml-1">Dixit</span>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <ul class="hidden md:flex space-x-8 items-center font-medium">
+                    <li><a href="index.html" class="text-gray-700 hover:text-blue-600 transition">Home</a></li>
+                    <li><a href="about.html" class="text-gray-700 hover:text-blue-600 transition">About</a></li>
+                    <li><a href="batches.html" class="text-gray-700 hover:text-blue-600 transition">Batches</a></li>
+                    <li><a href="toppers.html" class="text-gray-700 hover:text-blue-600 transition">Toppers</a></li>
+                    <li><a href="index.html#contact" class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 shadow-md transition">Contact Us</a></li>
+                </ul>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-blue-900 focus:outline-none p-2 mr-[-8px]">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
         </div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="batches.html">Batches</a></li>
-            <li><a href="toppers.html">Toppers</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-        <div class="hamburger">
-            <i class="fas fa-bars"></i>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-xl absolute w-full left-0 top-20">
+            <ul class="flex flex-col px-4 pt-4 pb-6 space-y-4 font-medium text-center">
+                <li><a href="index.html" class="block py-2 text-gray-700 hover:text-blue-600">Home</a></li>
+                <li><a href="about.html" class="block py-2 text-gray-700 hover:text-blue-600">About</a></li>
+                <li><a href="batches.html" class="block py-2 text-gray-700 hover:text-blue-600">Batches</a></li>
+                <li><a href="toppers.html" class="block py-2 text-gray-700 hover:text-blue-600">Toppers</a></li>
+                <li><a href="index.html#contact" class="block py-2 text-gray-700 hover:text-blue-600 font-bold">Contact Us</a></li>
+            </ul>
         </div>
     </nav>
 
-    <section class="policy-section">
-        <h1>Privacy Policy</h1>
-        <p class="last-updated">Last Updated: June 2026</p>
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-blue-900 to-blue-700 pt-32 pb-16 text-center text-white relative overflow-hidden w-full">
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+        <div class="relative z-10 reveal fade-bottom w-full px-4">
+            <h1 class="text-3xl md:text-5xl font-bold mb-3 md:mb-4 premium-font text-yellow-400 drop-shadow-md">Privacy Policy</h1>
+            <div class="w-16 md:w-24 h-1 bg-yellow-400 mx-auto rounded-full"></div>
+        </div>
+    </header>
 
-        <p>Welcome to Ankit Dixit Physics Classes. Your privacy is important to us. This Privacy Policy explains how we handle information when you visit our website.</p>
+    <!-- Privacy Policy Document Section -->
+    <section class="py-12 md:py-20 bg-gray-50 w-full">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            
+            <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 md:p-12 reveal fade-bottom">
 
-        <h2>1. Information We Do Not Collect</h2>
-        <p>Our website is a static, informational platform. We respect your privacy and <strong>do not collect any personal data automatically</strong>. We do not use user registration forms, login portals, or payment gateways on this website. You can browse our website completely anonymously.</p>
+                <p class="text-gray-700 text-sm md:text-base leading-relaxed mb-8 mt-2">
+                    Welcome to Ankit Dixit Physics Classes. Your privacy is important to us. This Privacy Policy explains how we handle information when you visit our website.
+                </p>
 
-        <h2>2. Information You Voluntarily Provide</h2>
-        <p>We only receive personal information (such as your name, phone number, or email address) if you voluntarily choose to contact us directly through:</p>
-        <ul>
-            <li>WhatsApp messages</li>
-            <li>Direct Phone Calls or SMS</li>
-            <li>Email communications</li>
-            <li>Direct messages on our Social Media profiles (Instagram, Facebook)</li>
-        </ul>
-        <p>Any information you share through these channels is used strictly to respond to your queries, provide batch details, or assist you with coaching-related information. We do not sell, rent, or share your contact details with any third-party marketing agencies.</p>
+                <!-- Policy Point 1 -->
+                <h2 class="text-xl md:text-2xl font-bold text-blue-800 mt-8 mb-4 border-b-2 border-gray-50 pb-2">1. Information We Do Not Collect</h2>
+                <p class="text-gray-700 text-sm md:text-base leading-relaxed mb-6">
+                    Our website is a static, informational platform. We respect your privacy and <strong>do not collect any personal data automatically</strong>. We do not use user registration forms, login portals, or payment gateways on this website. You can browse our website completely anonymously.
+                </p>
 
-        <h2>3. External Links & Social Media</h2>
-        <p>Our website contains links to our official social media pages, including YouTube, Instagram, and Facebook. Clicking on these links will redirect you to their respective apps or websites.</p>
-        <p>Please note that we have no control over how these third-party platforms collect or use your data. We encourage you to review the privacy policies of YouTube, Instagram, and Facebook before interacting with them.</p>
+                <!-- Policy Point 2 -->
+                <h2 class="text-xl md:text-2xl font-bold text-blue-800 mt-8 mb-4 border-b-2 border-gray-50 pb-2">2. Information You Voluntarily Provide</h2>
+                <p class="text-gray-700 text-sm md:text-base leading-relaxed mb-4">
+                    We only receive personal information (such as your name, phone number, or email address) if you voluntarily choose to contact us directly through:
+                </p>
+                <ul class="list-disc list-inside text-gray-700 text-sm md:text-base space-y-2 mb-6 ml-2 md:ml-4">
+                    <li>WhatsApp messages</li>
+                    <li>Direct Phone Calls or SMS</li>
+                    <li>Email communications</li>
+                    <li>Direct messages on our Social Media profiles (Instagram, Facebook)</li>
+                </ul>
+                <p class="text-gray-700 text-sm md:text-base leading-relaxed mb-6">
+                    Any information you share through these channels is used strictly to respond to your queries, provide batch details, or assist you with coaching-related information. We do not sell, rent, or share your contact details with any third-party marketing agencies.
+                </p>
 
-        <h2>4. Cookies</h2>
-        <p>Since this is a simple informational website, we do not use tracking cookies or advertising pixels to track your browsing behavior across the internet.</p>
+                <!-- Policy Point 3 -->
+                <h2 class="text-xl md:text-2xl font-bold text-blue-800 mt-8 mb-4 border-b-2 border-gray-50 pb-2">3. External Links & Social Media</h2>
+                <p class="text-gray-700 text-sm md:text-base leading-relaxed mb-4">
+                    Our website contains links to our official social media pages, including YouTube, Instagram, and Facebook. Clicking on these links will redirect you to their respective apps or websites.
+                </p>
+                <p class="text-gray-700 text-sm md:text-base leading-relaxed mb-6">
+                    Please note that we have no control over how these third-party platforms collect or use your data. We encourage you to review the privacy policies of YouTube, Instagram, and Facebook before interacting with them.
+                </p>
 
-        <h2>5. Changes & Future Updates to This Policy</h2>
-        <p>Currently, our website operates as a static informational platform. However, as we grow, we may introduce new features in the future (such as online batch enrollment, user accounts, or payment gateways).</p>
-        <p>When such features are added, this Privacy Policy will be updated to reflect how we securely collect and process the necessary data (like payment information). Any changes will be reflected on this page with an updated date, and we encourage you to review it periodically.</p>
+                <!-- Policy Point 4 -->
+                <h2 class="text-xl md:text-2xl font-bold text-blue-800 mt-8 mb-4 border-b-2 border-gray-50 pb-2">4. Cookies</h2>
+                <p class="text-gray-700 text-sm md:text-base leading-relaxed mb-6">
+                    Since this is a simple informational website, we do not use tracking cookies or advertising pixels to track your browsing behavior across the internet.
+                </p>
 
+                <!-- Policy Point 5 -->
+                <h2 class="text-xl md:text-2xl font-bold text-blue-800 mt-8 mb-4 border-b-2 border-gray-50 pb-2">5. Changes & Future Updates to This Policy</h2>
+                <p class="text-gray-700 text-sm md:text-base leading-relaxed mb-4">
+                    Currently, our website operates as a static informational platform. However, as we grow, we may introduce new features in the future (such as online batch enrollment, user accounts, or payment gateways).
+                </p>
+                <p class="text-gray-700 text-sm md:text-base leading-relaxed">
+                    When such features are added, this Privacy Policy will be updated to reflect how we securely collect and process the necessary data (like payment information). Any changes will be reflected on this page, and we encourage you to review it periodically.
+                </p>
+            </div>
+
+            <!-- Back to Home Button -->
+            <div class="text-center mt-12 md:mt-16 reveal fade-bottom">
+                <a href="index.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-900 to-blue-700 hover:from-blue-800 hover:to-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </a>
+            </div>
+
+        </div>
     </section>
 
-    <div class="copyright">
-        <div style="margin-bottom: 15px;">
-            <a href="privacy.html" style="color: #cbd5e1; font-size: 0.9rem; text-decoration: underline;">Privacy Policy</a>
+    <!-- Footer -->
+    <footer class="bg-blue-900 pt-10 pb-6 text-white text-center w-full overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="text-blue-300 text-xs md:text-sm">&copy; 2026 AnkitDixit. All Rights Reserved.</p>
+            <div class="my-2 md:my-3">
+                <a href="privacy.html" class="text-white text-xs md:text-sm underline transition">Privacy Policy</a>
+            </div>
+            <p class="text-blue-300 text-xs md:text-sm mt-2"><i class="fas fa-map-marker-alt text-red-400"></i> Civil Lines, Banda, Uttar Pradesh [210001]</p>
+            <p class="text-blue-400 text-[10px] md:text-xs mt-4 pt-4 border-t border-blue-800 inline-block">Designed with <i class="fas fa-heart text-red-500 mx-1"></i> by <a href="https://www.instagram.com/lastwishmarketing?igsh=ZzlsNzhhY3Z3b3B1" target="_blank" class="hover:text-white transition">LastWish Marketing</a></p>
         </div>
-        <p>&copy; 2026 AnkitDixit. All Rights Reserved.</p>
-        <p class="location-text">
-            <i class="fas fa-map-marker-alt"></i> Location - Dr Narendra Gupta ki gali ke pichhe, Civil Lines, Banda, Uttar Pradesh [210001]
-        </p>
-        <p class="developer-credit">
-            Designed & Developed with <i class="fas fa-heart"></i> by <a href="https://www.instagram.com/lastwishmarketing?igsh=ZzlsNzhhY3Z3b3B1" target="_blank">LastWish Marketing</a>
-        </p>
-    </div>
+    </footer>
 
-    <script>
-        const hamburger = document.querySelector(".hamburger");
-        const navLinks = document.querySelector(".nav-links");
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" class="fixed bottom-6 right-4 md:right-6 bg-blue-600 text-white w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center text-lg md:text-xl shadow-xl opacity-0 invisible transition-all duration-300 hover:bg-blue-700 z-40">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-        hamburger.addEventListener("click", () => {
-            navLinks.classList.toggle("active");
-        });
-    </script>
+    <!-- Script Link -->
+    <script src="script.js"></script>
 </body>
 </html>
